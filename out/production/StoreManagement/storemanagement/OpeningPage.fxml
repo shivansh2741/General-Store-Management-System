@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox id="table" alignment="CENTER" layoutX="10.0" layoutY="10.0" stylesheets="@design.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane alignment="CENTER" prefHeight="764.0" prefWidth="651.0" stylesheets="@design.css">
+               <children>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="900.0" text="Jerald Kannath                            - IIT2020003" textFill="WHITE" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="900.0" text="Tarun Jayadevan                       -  IIT2020004" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="900.0" text="Sahil Pote                                        - IIT2020240" textFill="WHITE" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="18">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="900.0" text="Aniruddh Sharma                        - IIB2020502" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="14">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="900.0" text="Rudranks Chandra Sharma    - IIB2020003" textFill="WHITE" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="16">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Welcome to Group 44's General Store Portal" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="900.0" text=" !!!  HAPPY SHOPPING  !!!" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints minHeight="-Infinity" />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

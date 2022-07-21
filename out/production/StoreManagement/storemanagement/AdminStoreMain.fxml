@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="storemanagement.StoreMainController">
+   <left>
+      <VBox id="table" prefHeight="595.0" prefWidth="204.0" stylesheets="@tables.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="56.0" prefWidth="164.0" text="Welcome " textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold Italic" size="30" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="171.0" text="Admin" textFill="WHITE">
+            <font>
+               <Font name="Calibri Bold Italic" size="24.0" />
+            </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label />
+            <ToggleButton id="toggle" mnemonicParsing="false" onAction="#SetPurchaseScene" prefHeight="79.0" prefWidth="164.0" stylesheets="@bigY.css" text="Seller Purchases" wrapText="true">
+               <toggleGroup>
+                  <ToggleGroup fx:id="g1" />
+               </toggleGroup></ToggleButton>
+            <Label />
+            <ToggleButton id="toggle" mnemonicParsing="false" onAction="#SetCoustomerScene" prefHeight="79.0" prefWidth="164.0" stylesheets="@bigY.css" text="Customer Information" toggleGroup="$g1" wrapText="true" />
+            <Label />
+            <ToggleButton id="toggle" mnemonicParsing="false" onAction="#SetSellerScene" prefHeight="77.0" prefWidth="164.0" stylesheets="@bigY.css" text="Seller Information" toggleGroup="$g1" wrapText="true" />
+            <Label />
+            <ToggleButton id="toggle" mnemonicParsing="false" onAction="#SetInventoryScene" prefHeight="75.0" prefWidth="164.0" stylesheets="@bigY.css" text="Current Inventory" toggleGroup="$g1" wrapText="true" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+</BorderPane>

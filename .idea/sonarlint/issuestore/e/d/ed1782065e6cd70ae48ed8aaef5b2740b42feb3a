@@ -1,0 +1,7 @@
+
+a
+java:S1192;"FDefine a constant instead of duplicating this literal " AND " 3 times.(óÂ‘”ÿÿÿÿÿ
+h
+java:S3776."RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ãà‡ş
+S	java:S106\"9Replace this use of System.out or System.err by a logger.(œ¡øşÿÿÿÿ
+N	java:S106]"9Replace this use of System.out or System.err by a logger.(Šğš

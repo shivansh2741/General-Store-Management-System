@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="false" />
+    <value-preview-pinned value="false" />
+  </component>
+  <component name="DBNavigator.Project.DataExportManager">
+    <export-instructions>
+      <create-header value="true" />
+      <friendly-headers value="false" />
+      <quote-values-containing-separator value="true" />
+      <quote-all-values value="false" />
+      <value-separator value="" />
+      <file-name value="" />
+      <file-location value="" />
+      <scope value="GLOBAL" />
+      <destination value="FILE" />
+      <format value="EXCEL" />
+      <charset value="UTF-8" />
+      <charset value="UTF-8" />
+    </export-instructions>
+  </component>
+  <component name="DBNavigator.Project.DatabaseBrowserManager">
+    <autoscroll-to-editor value="false" />
+    <autoscroll-from-editor value="true" />
+    <show-object-properties value="true" />
+    <loaded-nodes />
+  </component>
+  <component name="DBNavigator.Project.DatabaseConsoleManager">
+    <connection id="1aadeeb0-6f41-48b9-bcd5-f35e70e99363">
+      <console name="Connection" type="STANDARD" schema="store" session="Main"><![CDATA[/*
+Group 44
+	Tarun Jayadevan (IIT2020003)
+	Jerald Kannath (IIT2020004)
+	Rudranks Chandra Sarma (IIB2020003)
+	Aniruddh Sharma (IIB2020502)
+	Sahil Pote (IIT2020240)
+*/
+ 
+-- CREATE DATABASE store;
+-- USE store;
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+
+
+-- LOGIN TABLE --
+
+CREATE TABLE `login`(
+	`Customer_Name` varchar(50) NOT NULL,
+    `Customer_Password` varchar(50) NOT NULL
+);
+INSERT INTO `login`(`Customer_Name`,`Customer_Password`) VALUES
+('admin','admin');
+INSERT INTO `login`(`Customer_Name`,`Customer_Password`) VALUES
+('John','john');
+INSERT INTO `login`(`Customer_Name`,`Customer_Password`) VALUES
+('Ash','ash');
+INSERT INTO `login`(`Customer_Name`,`Customer_Password`) VALUES
+('Eren','eren');
+INSERT INTO `login`(`Customer_Name`,`Customer_Password`) VALUES
+('Ted','ted');
+INSERT INTO `login`(`Customer_Name`,`Customer_Password`) VALUES
+('Pat','pat');
+
+
+-- CUSTOMER TABLE --
+
+CREATE TABLE `customertable` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `CustomerName` varchar(50) NOT NULL,
+  `CustomerContact` varchar(50) NOT NULL UNIQUE,
+  `CustomerAddress` varchar(150) NOT NULL
+);
+ALTER TABLE `customertable` AUTO_INCREMENT=6;
+
+INSERT INTO `customertable` (`Id`, `CustomerName`, `CustomerContact`, `CustomerAddress`) VALUES
+(1, 'John', '9999999999', 'abc');
+INSERT INTO `customertable` (`Id`, `CustomerName`, `CustomerContact`, `CustomerAddress`) VALUES
+(2, 'Eren', '9999999998', 'def');
+INSERT INTO `customertable` (`Id`, `CustomerName`, `CustomerContact`, `CustomerAddress`) VALUES
+(3, 'Ash', '9999999997', 'ghi');
+INSERT INTO `customertable` (`Id`, `CustomerName`, `CustomerContact`, `CustomerAddress`) VALUES
+(4, 'Ted', '9999999996', 'jkl');
+INSERT INTO `customertable` (`Id`, `CustomerName`, `CustomerContact`, `CustomerAddress`) VALUES
+(5, 'Pat', '9999999995', 'mno');
+
+-- INVENTORY TABLE --
+
+CREATE TABLE `inventorytable` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `ProductName` varchar(50) NOT NULL,
+  `BatchNumber` varchar(50) NOT NULL,
+  `Quantity` varchar(50) NOT NULL,
+  `PurchaseDate` date DEFAULT NULL,
+  `PurchaseRate` double NOT NULL DEFAULT '0',
+  `SellingRate` double NOT NULL DEFAULT '0',
+  `ExpiryDate` date NOT NULL
+);
+ALTER TABLE `inventorytable` AUTO_INCREMENT=11;
+
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(1, 'Jam', '123', '300', '2022-02-25', 25, 30, '2022-05-20');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(2, 'Soap', '789', '200', '2022-03-07', 15, 20, '2022-04-27');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(3, 'Pen', '450', '696', '2022-01-01', 5, 10, '2023-09-07');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(4, 'Oil', '321', '500', '2022-04-22', 35, 40, '2022-06-03');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(5, 'Notebook', '777', '450', '2021-03-09', 40, 50, '2023-02-03');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(6, 'Butter', '231', '200', '2022-03-01', 15, 20, '2022-05-17');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(7, 'Pepsi', '786', '250', '2022-02-21', 15, 20, '2022-06-11');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(8, 'Cake', '678', '270', '2022-01-23', 10, 15, '2022-05-19');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(9, 'Oreo', '432', '299', '2022-04-21', 7, 10, '2022-05-20');
+INSERT INTO `inventorytable` (`Id`, `ProductName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(10, 'Battery', '420', '350', '2022-03-22', 5, 10, '2022-06-17');
+
+-- PURCHASE TABLE --
+
+CREATE TABLE `purchasetable` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `ProductName` varchar(50) NOT NULL,
+  `SellerName` varchar(100) NOT NULL,
+  `BatchNumber` varchar(50) NOT NULL,
+  `Quantity` varchar(50) NOT NULL,
+  `PurchaseDate` date DEFAULT NULL,
+  `PurchaseRate` double NOT NULL DEFAULT '0',
+  `SellingRate` double NOT NULL DEFAULT '0',
+  `ExpiryDate` date NOT NULL
+);
+ALTER TABLE `purchasetable` AUTO_INCREMENT=11;
+
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(1, 'Jam', 'Jim', '123', '300', '2022-02-25', 25, 30, '2022-05-20');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(2, 'Soap', 'Jim', '789', '200', '2022-03-07', 15, 20, '2022-04-27');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(3, 'Pen', 'Tony', '450', '696', '2022-01-01', 5, 10, '2023-09-07');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(4, 'Oil', 'Tony', '321', '500', '2022-04-22', 35, 40, '2022-06-03');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(5, 'Notebook', 'Tony', '777', '450', '2021-03-09', 40, 50, '2023-02-03');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(6, 'Butter', 'Leo', '231', '200', '2022-03-01', 15, 20, '2022-05-17');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(7, 'Pepsi', 'Leo', '786', '250', '2022-02-21', 15, 20, '2022-06-11');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(8, 'Cake', 'Sam', '678', '270', '2022-01-23', 10, 15, '2022-05-19');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(9, 'Oreo', 'Sam', '432', '299', '2022-04-21', 7, 10, '2022-05-20');
+INSERT INTO `purchasetable` (`Id`, `ProductName`, `SellerName`, `BatchNumber`, `Quantity`, `PurchaseDate`, `PurchaseRate`, `SellingRate`, `ExpiryDate`) VALUES
+(10, 'Battery', 'Mark', '420', '350', '2022-03-22', 5, 10, '2022-06-17');
+
+-- SALE TABLE --
+
+CREATE TABLE `saletable` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `Date` datetime DEFAULT NULL,
+  `Customer` varchar(150) NOT NULL,
+  `TotalAmount` double NOT NULL DEFAULT '0'
+);
+ALTER TABLE `saletable` AUTO_INCREMENT=4;
+
+INSERT INTO `saletable` (`Id`, `Date`, `Customer`, `TotalAmount`) VALUES
+(1, '2022-03-01 06:09:06', 'John', 30);
+INSERT INTO `saletable` (`Id`, `Date`, `Customer`, `TotalAmount`) VALUES
+(2, '2022-01-05 03:03:23', 'Ash', 50);
+INSERT INTO `saletable` (`Id`, `Date`, `Customer`, `TotalAmount`) VALUES
+(3, '2022-04-23 11:43:32', 'Pat', 20);
+
+-- SALE ITEM TABLE --
+
+CREATE TABLE `saleitemtable` (
+  `InvoId` int(11) NOT NULL,
+  `ProductName` varchar(50) NOT NULL,
+  `Batch` varchar(50) NOT NULL,
+  `Quantity` double NOT NULL DEFAULT '0',
+  `Amount` double NOT NULL DEFAULT '0'
+);
+ALTER TABLE `saleitemtable`
+  ADD KEY `InvoId` (`InvoId`),
+  ADD KEY `par_ind` (`InvoId`);
+ALTER TABLE `saleitemtable`
+  ADD CONSTRAINT `fk_branchTable` FOREIGN KEY (`InvoId`) REFERENCES `saletable` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `saleitemtable` AUTO_INCREMENT=4;
+  
+INSERT INTO `saleitemtable` (`InvoId`, `ProductName`, `Batch`, `Quantity`, `Amount`) VALUES
+(1, 'Jam', '123', 1, 30);
+INSERT INTO `saleitemtable` (`InvoId`, `ProductName`, `Batch`, `Quantity`, `Amount`) VALUES
+(2, 'Pen', '450', 5, 50);
+INSERT INTO `saleitemtable` (`InvoId`, `ProductName`, `Batch`, `Quantity`, `Amount`) VALUES
+(3, 'Oreo', '432', 2, 20);
+
+-- SELLER TABLE --
+
+CREATE TABLE `sellertable` (
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `SellerName` varchar(50) NOT NULL,
+  `SellerContact` varchar(50) NOT NULL,
+  `SellerAddress` varchar(150) NOT NULL
+);
+ALTER TABLE `sellertable` AUTO_INCREMENT=6;
+
+INSERT INTO `sellertable` (`Id`, `SellerName`, `SellerContact`, `SellerAddress`) VALUES
+(1, 'Jim', '9876543210', 'xyz xyz xyz');
+INSERT INTO `sellertable` (`Id`, `SellerName`, `SellerContact`, `SellerAddress`) VALUES
+(2, 'Tony', '8765432109', 'xyz xyz abc');
+INSERT INTO `sellertable` (`Id`, `SellerName`, `SellerContact`, `SellerAddress`) VALUES
+(3, 'Mark', '0987654321', 'xyz abc xyz');
+INSERT INTO `sellertable` (`Id`, `SellerName`, `SellerContact`, `SellerAddress`) VALUES
+(4, 'Leo', '7654321098', 'abc xyz xyz');
+INSERT INTO `sellertable` (`Id`, `SellerName`, `SellerContact`, `SellerAddress`) VALUES
+(5, 'Sam', '9879879879', 'abc abc abc');
+
+COMMIT;]]></console>
+    </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseFileManager">
+    <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="1aadeeb0-6f41-48b9-bcd5-f35e70e99363" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="1aadeeb0-6f41-48b9-bcd5-f35e70e99363" dataset="store.login" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="1aadeeb0-6f41-48b9-bcd5-f35e70e99363" dataset="store.customertable" active-filter-id="EMPTY_FILTER" />
+  </component>
+  <component name="DBNavigator.Project.EditorStateManager">
+    <last-used-providers />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <argument-values-cache />
+  </component>
+  <component name="DBNavigator.Project.ObjectDependencyManager">
+    <last-used-dependency-type value="INCOMING" />
+  </component>
+  <component name="DBNavigator.Project.ObjectQuickFilterManager">
+    <last-used-operator value="EQUAL" />
+    <filters />
+  </component>
+  <component name="DBNavigator.Project.ParserDiagnosticsManager">
+    <diagnostics-history />
+  </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces />
+  </component>
+  <component name="DBNavigator.Project.Settings">
+    <connections>
+      <connection id="1aadeeb0-6f41-48b9-bcd5-f35e70e99363" active="true" signed="true">
+        <database>
+          <name value="Connection" />
+          <description value="" />
+          <database-type value="MYSQL" />
+          <config-type value="BASIC" />
+          <database-version value="8.0" />
+          <driver-source value="BUILTIN" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="3306" />
+          <database value="" />
+          <type value="USER_PASSWORD" />
+          <user value="root" />
+          <deprecated-pwd value="cm9vdHJvb3Q=" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="5" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+    </connections>
+    <browser-settings>
+      <general>
+        <display-mode value="TABBED" />
+        <navigation-history-size value="100" />
+        <show-object-details value="false" />
+      </general>
+      <filters>
+        <object-type-filter>
+          <object-type name="SCHEMA" enabled="true" />
+          <object-type name="USER" enabled="true" />
+          <object-type name="ROLE" enabled="true" />
+          <object-type name="PRIVILEGE" enabled="true" />
+          <object-type name="CHARSET" enabled="true" />
+          <object-type name="TABLE" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED_VIEW" enabled="true" />
+          <object-type name="NESTED_TABLE" enabled="true" />
+          <object-type name="COLUMN" enabled="true" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="DATASET_TRIGGER" enabled="true" />
+          <object-type name="DATABASE_TRIGGER" enabled="true" />
+          <object-type name="SYNONYM" enabled="true" />
+          <object-type name="SEQUENCE" enabled="true" />
+          <object-type name="PROCEDURE" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
+          <object-type name="PACKAGE" enabled="true" />
+          <object-type name="TYPE" enabled="true" />
+          <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+          <object-type name="ARGUMENT" enabled="true" />
+          <object-type name="DIMENSION" enabled="true" />
+          <object-type name="CLUSTER" enabled="true" />
+          <object-type name="DBLINK" enabled="true" />
+        </object-type-filter>
+      </filters>
+      <sorting>
+        <object-type name="COLUMN" sorting-type="NAME" />
+        <object-type name="FUNCTION" sorting-type="NAME" />
+        <object-type name="PROCEDURE" sorting-type="NAME" />
+        <object-type name="ARGUMENT" sorting-type="POSITION" />
+      </sorting>
+      <default-editors>
+        <object-type name="VIEW" editor-type="SELECTION" />
+        <object-type name="PACKAGE" editor-type="SELECTION" />
+        <object-type name="TYPE" editor-type="SELECTION" />
+      </default-editors>
+    </browser-settings>
+    <navigation-settings>
+      <lookup-filters>
+        <lookup-objects>
+          <object-type name="SCHEMA" enabled="true" />
+          <object-type name="USER" enabled="false" />
+          <object-type name="ROLE" enabled="false" />
+          <object-type name="PRIVILEGE" enabled="false" />
+          <object-type name="CHARSET" enabled="false" />
+          <object-type name="TABLE" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED VIEW" enabled="true" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="DATASET TRIGGER" enabled="true" />
+          <object-type name="DATABASE TRIGGER" enabled="true" />
+          <object-type name="SYNONYM" enabled="false" />
+          <object-type name="SEQUENCE" enabled="true" />
+          <object-type name="PROCEDURE" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
+          <object-type name="PACKAGE" enabled="true" />
+          <object-type name="TYPE" enabled="true" />
+          <object-type name="DIMENSION" enabled="false" />
+          <object-type name="CLUSTER" enabled="false" />
+          <object-type name="DBLINK" enabled="true" />
+        </lookup-objects>
+        <force-database-load value="false" />
+        <prompt-connection-selection value="true" />
+        <prompt-schema-selection value="true" />
+      </lookup-filters>
+    </navigation-settings>
+    <dataset-grid-settings>
+      <general>
+        <enable-zooming value="true" />
+        <enable-column-tooltip value="true" />
+      </general>
+      <sorting>
+        <nulls-first value="true" />
+        <max-sorting-columns value="4" />
+      </sorting>
+      <audit-columns>
+        <column-names value="" />
+        <visible value="true" />
+        <editable value="false" />
+      </audit-columns>
+    </dataset-grid-settings>
+    <dataset-editor-settings>
+      <text-editor-popup>
+        <active value="false" />
+        <active-if-empty value="false" />
+        <data-length-threshold value="100" />
+        <popup-delay value="1000" />
+      </text-editor-popup>
+      <values-actions-popup>
+        <show-popup-button value="true" />
+        <element-count-threshold value="1000" />
+        <data-length-threshold value="250" />
+      </values-actions-popup>
+      <general>
+        <fetch-block-size value="100" />
+        <fetch-timeout value="30" />
+        <trim-whitespaces value="true" />
+        <convert-empty-strings-to-null value="true" />
+        <select-content-on-cell-edit value="true" />
+        <large-value-preview-active value="true" />
+      </general>
+      <filters>
+        <prompt-filter-dialog value="true" />
+        <default-filter-type value="BASIC" />
+      </filters>
+      <qualified-text-editor text-length-threshold="300">
+        <content-types>
+          <content-type name="Text" enabled="true" />
+          <content-type name="Properties" enabled="true" />
+          <content-type name="XML" enabled="true" />
+          <content-type name="DTD" enabled="true" />
+          <content-type name="HTML" enabled="true" />
+          <content-type name="XHTML" enabled="true" />
+          <content-type name="Java" enabled="true" />
+          <content-type name="SQL" enabled="true" />
+          <content-type name="PL/SQL" enabled="true" />
+          <content-type name="JSON" enabled="true" />
+          <content-type name="JSON5" enabled="true" />
+          <content-type name="Groovy" enabled="true" />
+          <content-type name="AIDL" enabled="true" />
+          <content-type name="YAML" enabled="true" />
+          <content-type name="Manifest" enabled="true" />
+        </content-types>
+      </qualified-text-editor>
+      <record-navigation>
+        <navigation-target value="VIEWER" />
+      </record-navigation>
+    </dataset-editor-settings>
+    <code-editor-settings>
+      <general>
+        <show-object-navigation-gutter value="false" />
+        <show-spec-declaration-navigation-gutter value="true" />
+        <enable-spellchecking value="true" />
+        <enable-reference-spellchecking value="false" />
+      </general>
+      <confirmations>
+        <save-changes value="false" />
+        <revert-changes value="true" />
+      </confirmations>
+    </code-editor-settings>
+    <code-completion-settings>
+      <filters>
+        <basic-filter>
+          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
+          <filter-element type="RESERVED_WORD" id="function" selected="true" />
+          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
+          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
+          <filter-element type="RESERVED_WORD" id="exception" selected="true" />
+          <filter-element type="OBJECT" id="schema" selected="true" />
+          <filter-element type="OBJECT" id="role" selected="true" />
+          <filter-element type="OBJECT" id="user" selected="true" />
+          <filter-element type="OBJECT" id="privilege" selected="true" />
+          <user-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="false" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </user-schema>
+          <public-schema>
+            <filter-element type="OBJECT" id="table" selected="false" />
+            <filter-element type="OBJECT" id="view" selected="false" />
+            <filter-element type="OBJECT" id="materialized view" selected="false" />
+            <filter-element type="OBJECT" id="index" selected="false" />
+            <filter-element type="OBJECT" id="constraint" selected="false" />
+            <filter-element type="OBJECT" id="trigger" selected="false" />
+            <filter-element type="OBJECT" id="synonym" selected="false" />
+            <filter-element type="OBJECT" id="sequence" selected="false" />
+            <filter-element type="OBJECT" id="procedure" selected="false" />
+            <filter-element type="OBJECT" id="function" selected="false" />
+            <filter-element type="OBJECT" id="package" selected="false" />
+            <filter-element type="OBJECT" id="type" selected="false" />
+            <filter-element type="OBJECT" id="dimension" selected="false" />
+            <filter-element type="OBJECT" id="cluster" selected="false" />
+            <filter-element type="OBJECT" id="dblink" selected="false" />
+          </public-schema>
+          <any-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </any-schema>
+        </basic-filter>
+        <extended-filter>
+          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
+          <filter-element type="RESERVED_WORD" id="function" selected="true" />
+          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
+          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
+          <filter-element type="RESERVED_WORD" id="exception" selected="true" />
+          <filter-element type="OBJECT" id="schema" selected="true" />
+          <filter-element type="OBJECT" id="user" selected="true" />
+          <filter-element type="OBJECT" id="role" selected="true" />
+          <filter-element type="OBJECT" id="privilege" selected="true" />
+          <user-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </user-schema>
+          <public-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </public-schema>
+          <any-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </any-schema>
+        </extended-filter>
+      </filters>
+      <sorting enabled="true">
+        <sorting-element type="RESERVED_WORD" id="keyword" />
+        <sorting-element type="RESERVED_WORD" id="datatype" />
+        <sorting-element type="OBJECT" id="column" />
+        <sorting-element type="OBJECT" id="table" />
+        <sorting-element type="OBJECT" id="view" />
+        <sorting-element type="OBJECT" id="materialized view" />
+        <sorting-element type="OBJECT" id="index" />
+        <sorting-element type="OBJECT" id="constraint" />
+        <sorting-element type="OBJECT" id="trigger" />
+        <sorting-element type="OBJECT" id="synonym" />
+        <sorting-element type="OBJECT" id="sequence" />
+        <sorting-element type="OBJECT" id="procedure" />
+        <sorting-element type="OBJECT" id="function" />
+        <sorting-element type="OBJECT" id="package" />
+        <sorting-element type="OBJECT" id="type" />
+        <sorting-element type="OBJECT" id="dimension" />
+        <sorting-element type="OBJECT" id="cluster" />
+        <sorting-element type="OBJECT" id="dblink" />
+        <sorting-element type="OBJECT" id="schema" />
+        <sorting-element type="OBJECT" id="role" />
+        <sorting-element type="OBJECT" id="user" />
+        <sorting-element type="RESERVED_WORD" id="function" />
+        <sorting-element type="RESERVED_WORD" id="parameter" />
+      </sorting>
+      <format>
+        <enforce-code-style-case value="true" />
+      </format>
+    </code-completion-settings>
+    <execution-engine-settings>
+      <statement-execution>
+        <fetch-block-size value="100" />
+        <execution-timeout value="20" />
+        <debug-execution-timeout value="600" />
+        <focus-result value="false" />
+        <prompt-execution value="false" />
+      </statement-execution>
+      <script-execution>
+        <command-line-interfaces />
+        <execution-timeout value="300" />
+      </script-execution>
+      <method-execution>
+        <execution-timeout value="30" />
+        <debug-execution-timeout value="600" />
+        <parameter-history-size value="10" />
+      </method-execution>
+    </execution-engine-settings>
+    <operation-settings>
+      <transactions>
+        <uncommitted-changes>
+          <on-project-close value="ASK" />
+          <on-disconnect value="ASK" />
+          <on-autocommit-toggle value="ASK" />
+        </uncommitted-changes>
+        <multiple-uncommitted-changes>
+          <on-commit value="ASK" />
+          <on-rollback value="ASK" />
+        </multiple-uncommitted-changes>
+      </transactions>
+      <session-browser>
+        <disconnect-session value="ASK" />
+        <kill-session value="ASK" />
+        <reload-on-filter-change value="false" />
+      </session-browser>
+      <compiler>
+        <compile-type value="KEEP" />
+        <compile-dependencies value="ASK" />
+        <always-show-controls value="false" />
+      </compiler>
+      <debugger>
+        <debugger-type value="ASK" />
+        <use-generic-runners value="true" />
+      </debugger>
+    </operation-settings>
+    <ddl-file-settings>
+      <extensions>
+        <mapping file-type-id="VIEW" extensions="vw" />
+        <mapping file-type-id="TRIGGER" extensions="trg" />
+        <mapping file-type-id="PROCEDURE" extensions="prc" />
+        <mapping file-type-id="FUNCTION" extensions="fnc" />
+        <mapping file-type-id="PACKAGE" extensions="pkg" />
+        <mapping file-type-id="PACKAGE_SPEC" extensions="pks" />
+        <mapping file-type-id="PACKAGE_BODY" extensions="pkb" />
+        <mapping file-type-id="TYPE" extensions="tpe" />
+        <mapping file-type-id="TYPE_SPEC" extensions="tps" />
+        <mapping file-type-id="TYPE_BODY" extensions="tpb" />
+      </extensions>
+      <general>
+        <lookup-ddl-files value="true" />
+        <create-ddl-files value="false" />
+        <synchronize-ddl-files value="true" />
+        <use-qualified-names value="false" />
+        <make-scripts-rerunnable value="true" />
+      </general>
+    </ddl-file-settings>
+    <general-settings>
+      <regional-settings>
+        <date-format value="MEDIUM" />
+        <number-format value="UNGROUPED" />
+        <locale value="SYSTEM_DEFAULT" />
+        <use-custom-formats value="false" />
+      </regional-settings>
+      <environment>
+        <environment-types>
+          <environment-type id="development" name="Development" description="Development environment" color="-2430209/-12296320" readonly-code="false" readonly-data="false" />
+          <environment-type id="integration" name="Integration" description="Integration environment" color="-2621494/-12163514" readonly-code="true" readonly-data="false" />
+          <environment-type id="production" name="Production" description="Productive environment" color="-11574/-10271420" readonly-code="true" readonly-data="true" />
+          <environment-type id="other" name="Other" description="" color="-1576/-10724543" readonly-code="false" readonly-data="false" />
+        </environment-types>
+        <visibility-settings>
+          <connection-tabs value="true" />
+          <dialog-headers value="true" />
+          <object-editor-tabs value="true" />
+          <script-editor-tabs value="false" />
+          <execution-result-tabs value="true" />
+        </visibility-settings>
+      </environment>
+    </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+  </component>
+</project>

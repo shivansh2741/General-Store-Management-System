@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="table" prefHeight="758.0" prefWidth="1017.0" stylesheets="@../css/design.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="493.0" fitWidth="517.0" layoutX="687.0" layoutY="380.0">
+         <image>
+            <Image url="@../Images/tea_lady.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="558.0" fitWidth="529.0" layoutX="649.0" layoutY="-17.0">
+         <image>
+            <Image url="@../Images/pink_speech.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="634.0" fitWidth="711.0" layoutX="25.0" layoutY="173.0">
+         <image>
+            <Image url="@../Images/yellow_speech.png" />
+         </image>
+      </ImageView>
+      <TextArea blendMode="DARKEN" depthTest="DISABLE" layoutX="755.0" layoutY="110.0" prefHeight="377.0" prefWidth="354.0" rotate="10.8" text="Welcome to our &#10;Virtual General Store.&#10;Our range of products will &#10;definitely impress you.&#10;Hope you enjoy your time with us.&#10;&#10;Happy Shopping ! :D&#10;&#10;~ Tarun Jayadevan&#10;~ Jerald Kannath&#10;~ Rudranks Chandra Sharma&#10;~ Aniruddh Sharma&#10;~ Sahil Pote">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </TextArea>
+      <TextArea blendMode="DARKEN" depthTest="DISABLE" layoutX="165.0" layoutY="389.0" prefHeight="245.0" prefWidth="457.0" text="Fun Shopping fact :&#10;Beginning in 112 CE, Emperor Trajan began &#10;construction on the largest of Rome's &#10;imperial forums, which housed a variety &#10;of shops and services and two libraries. &#10;Today, Trajan’s Market is regarded &#10;as the oldest shopping mall in the world.&#10;">
+         <font>
+            <Font name="Comic Sans MS Bold" size="19.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="394.0" layoutY="354.0" rotate="-4.6" strokeType="OUTSIDE" strokeWidth="0.0" text="(Cause why not !):">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+
+J
+java:S3740$"/Provide the parametrized type for this generic.(ñœÓ½úÿÿÿÿ
+J
+java:S3740'"/Provide the parametrized type for this generic.(ë†˜Íýÿÿÿÿ
+E
+java:S3740<"/Provide the parametrized type for this generic.( ÌñÁ
+E
+java:S3740<"/Provide the parametrized type for this generic.( ÌñÁ
+E
+java:S3740>"/Provide the parametrized type for this generic.(°Ä£ß
+J
+java:S3740g"/Provide the parametrized type for this generic.(øÅ„‚ýÿÿÿÿ
+k	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë†˜Íýÿÿÿÿ
+>
+java:S1604>"(Make this anonymous inner class a lambda(°Ä£ß
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒêÏï
+b
+java:S3973("GUse indentation to denote the code conditionally executed by this "if".(´ª¦ßûÿÿÿÿ
+\
+java:S20953"GUse try-with-resources or close this "Statement" in a "finally" clause.(¦º›{
+V	java:S125,"<This block of commented-out lines of code should be removed.(’‡üÿÿÿÿ
+Q	java:S1251"<This block of commented-out lines of code should be removed.(˜·„Ÿ
+Q	java:S125Z"<This block of commented-out lines of code should be removed.(…Ð¬å
+N	java:S106c"9Replace this use of System.out or System.err by a logger.(–Ú¤•
+K
+java:S1128
+"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç
+T
+java:S1128"9Remove this unused import 'javafx.scene.image.ImageView'.(áÿ®Ãüÿÿÿÿ
+K
+java:S1128"0Remove this unused import 'javafx.geometry.Pos'.(ÌÆ÷Ùøÿÿÿÿ
+S
+java:S1128"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ
+V
+java:S1128";Remove this unused import 'javafx.scene.control.TableCell'.(÷ô¨žýÿÿÿÿ
+a
+java:S1128"KRemove this unused import 'javafx.scene.control.cell.PropertyValueFactory'.(àÎ¬õ
+V
+java:S1128";Remove this unused import 'javafx.scene.layout.Background'.(¤ä—Žýÿÿÿÿ
+K
+java:S1128"5Remove this unused import 'javafx.scene.paint.Color'.(Ïî£à

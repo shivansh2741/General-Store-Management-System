@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="471.0" style="-fx-background-color: #023047;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tar.Controller.registerController">
+   <children>
+      <TextField fx:id="nameTextField" layoutX="162.0" layoutY="168.0" prefHeight="26.0" prefWidth="242.0" />
+      <TextField fx:id="phoneTextField" layoutX="162.0" layoutY="318.0" prefHeight="26.0" prefWidth="242.0" />
+      <TextField fx:id="passTextField" layoutX="162.0" layoutY="241.0" prefHeight="26.0" prefWidth="242.0" />
+      <Label layoutX="63.0" layoutY="169.0" text="Name :" textFill="AQUA">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="242.0" text="Password :" textFill="#00fffd">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="319.0" text="Phone :" textFill="#00fffb">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="409.0" text="Address :" textFill="#00edff">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="addressTextArea" layoutX="162.0" layoutY="400.0" prefHeight="85.0" prefWidth="242.0" />
+      <Label alignment="CENTER" layoutX="1.0" layoutY="85.0" prefHeight="44.0" prefWidth="471.0" text="Create a New Account" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="236.0" layoutY="529.0" mnemonicParsing="false" onAction="#submitButton" prefHeight="34.0" prefWidth="75.0" style="-fx-background-color: #219EBC;" text="Submit">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button layoutX="342.0" layoutY="21.0" mnemonicParsing="false" onAction="#backToLoginButton" prefHeight="40.0" prefWidth="108.0" style="-fx-background-color: #219EBC;" text="Back to Login">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <ImageView fitHeight="151.0" fitWidth="184.0" layoutX="-1.0" layoutY="471.0">
+         <image>
+            <Image url="@../Images/happy_shopper.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

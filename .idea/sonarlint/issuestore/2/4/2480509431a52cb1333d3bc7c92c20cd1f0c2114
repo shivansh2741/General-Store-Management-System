@@ -1,0 +1,57 @@
+
+K
+java:S3740“"/Provide the parametrized type for this generic.(“÷§…øÿÿÿÿ
+K
+java:S3740“"/Provide the parametrized type for this generic.(“÷§…øÿÿÿÿ
+K
+java:S3740›"/Provide the parametrized type for this generic.(éƒ‡¬ÿÿÿÿÿ
+K
+java:S3740›"/Provide the parametrized type for this generic.(éƒ‡¬ÿÿÿÿÿ
+F
+java:S3740£"/Provide the parametrized type for this generic.(¨­àñ
+F
+java:S3740£"/Provide the parametrized type for this generic.(¨­àñ
+F
+java:S3740¬"/Provide the parametrized type for this generic.(€´Õ
+F
+java:S3740¬"/Provide the parametrized type for this generic.(€´Õ
+l	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“÷§…øÿÿÿÿ
+l	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éƒ‡¬ÿÿÿÿÿ
+g	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨­àñ
+g	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€´Õ
+D
+java:S1604”"(Make this anonymous inner class a lambda(ÓÔ‹±ûÿÿÿÿ
+?
+java:S1604œ"(Make this anonymous inner class a lambda(—ÁÈÃ
+?
+java:S1604¤"(Make this anonymous inner class a lambda(Ùâ¾ô
+?
+java:S1604­"(Make this anonymous inner class a lambda(š§À’
+c
+java:S2095ƒ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ú“èÉÿÿÿÿÿ
+^
+java:S2095€"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿
+k
+java:S2095ò"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‹Æ”ÿÿÿÿÿ
+`
+java:S2583å"DChange this condition so that it does not always evaluate to "false"(Şç©úÿÿÿÿ
+V	java:S125="<This block of commented-out lines of code should be removed.(ÈÜÍÃıÿÿÿÿ
+W
+java:S1854]"<Remove this useless assignment to local variable "autoCust".(”Œô½ıÿÿÿÿ
+Q	java:S125P"<This block of commented-out lines of code should be removed.(Í¡İ
+H
+java:S1481]"-Remove this unused "autoCust" local variable.(”Œô½ıÿÿÿÿ
+G
+java:S1602n",Remove useless curly braces around statement(âêİªûÿÿÿÿ
+H
+java:S1602‹",Remove useless curly braces around statement(âêİªûÿÿÿÿ
+R	java:S125¸"<This block of commented-out lines of code should be removed.(ŸëúÊ
+i	java:S100ã"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÇíÄùÿÿÿÿ
+d
+java:S3252ò"HUse static access with "java.sql.Statement" for "RETURN_GENERATED_KEYS".(‹Æ”ÿÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(Í¡İ
+i	java:S100”"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æœ´‰ÿÿÿÿÿ
+M
+java:S1172Ê"1Remove this unused method parameter "completion".(£Í…¸ûÿÿÿÿ
+J
+java:S1128	"/Remove this unused import 'DB.DisplayDatabase'.(ˆ‹˜‘şÿÿÿÿ

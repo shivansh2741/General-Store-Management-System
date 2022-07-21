@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="StoreManagement">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/StoreManagement.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../javafx-sdk-18" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../javafx-sdk-18" recursive="false" type="SOURCES" />
+  </library>
+</component>

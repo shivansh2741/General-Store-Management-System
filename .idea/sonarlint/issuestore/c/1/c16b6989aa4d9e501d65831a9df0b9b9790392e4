@@ -1,0 +1,25 @@
+
+F
+java:S3740Ø"/Provide the parametrized type for this generic.(ËôÌö
+0
+java:S1220""Move this file to a named package.
+^
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿
+]
+java:S2095q"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿
+S
+java:S1854O"8Remove this useless assignment to local variable "auto".(¸ö‹ªùÿÿÿÿ
+D
+java:S1481O")Remove this unused "auto" local variable.(¸ö‹ªùÿÿÿÿ
+H
+java:S1135S"2Complete the task associated to this TODO comment.(…ïœ†
+i	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÛ»½şÿÿÿÿ
+W	java:S125Í"<This block of commented-out lines of code should be removed.(İÍ‚Ğûÿÿÿÿ
+d	java:S100Ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šŞ×ã
+O
+java:S1128
+"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ
+K
+java:S1128"0Remove this unused import 'java.time.LocalTime'.(à®øÃùÿÿÿÿ
+P
+java:S1128":Remove this unused import 'javafx.scene.control.TextArea'.(ö ¸

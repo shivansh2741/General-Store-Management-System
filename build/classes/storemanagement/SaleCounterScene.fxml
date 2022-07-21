@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="storemanagement.SaleCounterSceneController">
+   <children>
+      <HBox prefHeight="574.0" prefWidth="1723.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane prefHeight="574.0" prefWidth="688.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.33331298828125" minWidth="10.0" prefWidth="106.33334350585938" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.33334350585938" minWidth="10.0" prefWidth="106.66665649414062" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.33334350585938" minWidth="10.0" prefWidth="106.66665649414062" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="250.0" text="Select Batch" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="250.0" text="Product Name" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cName" prefHeight="25.0" prefWidth="388.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="pName" onAction="#getBatch" prefHeight="25.0" prefWidth="399.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button id="toggle" mnemonicParsing="false" onAction="#addItem" prefHeight="42.0" prefWidth="209.0" stylesheets="@bigY.css" text="Add Item" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="250.0" text="Date" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="250.0" text="Rate" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="250.0" text="Quantity" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="quantity" onAction="#calcTotal" prefHeight="25.0" prefWidth="81.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="batchCombo" onAction="#getRate" prefHeight="25.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="sellRate" alignment="CENTER" prefHeight="25.0" prefWidth="114.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="250.0" text="Expiry" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="expiry" alignment="CENTER" prefHeight="24.0" prefWidth="114.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <DatePicker fx:id="sDate" prefHeight="25.0" prefWidth="128.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="250.0" text="Total Amount" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalL" alignment="CENTER" prefHeight="24.0" prefWidth="112.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="250.0" text="Customer Name:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="warnMsg" prefHeight="33.0" prefWidth="290.0" GridPane.columnSpan="3">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <VBox>
+               <children>
+                  <TableView id="table" fx:id="saleTable" prefHeight="495.0" prefWidth="386.0" stylesheets="@tables.css">
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#DeleteSale" text="Delete Sale" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                     <effect>
+                        <DropShadow height="32.86" radius="19.8825" spread="0.12" width="48.67" />
+                     </effect>
+                  </TableView>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="480.33331298828125" minWidth="10.0" prefWidth="160.33331298828125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="480.33331298828125" minWidth="10.0" prefWidth="290.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.66668701171875" minWidth="10.0" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.66668701171875" minWidth="10.0" prefWidth="170.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button id="toggle" mnemonicParsing="false" onAction="#RecordSale" prefHeight="52.0" prefWidth="194.0" stylesheets="@bigY.css" text="Record Sale" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="155.0" text="Grand Total :" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="gTotal" alignment="CENTER" prefHeight="38.0" prefWidth="155.0" text="0.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
